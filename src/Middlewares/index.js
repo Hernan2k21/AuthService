@@ -15,16 +15,15 @@ const sendError = (e, req, res, next) => {
 }
 
 const notFound = (req, res, next) => {
-  res.status(404)
-  res.json({message: 'Route not Found Auth service'})
+  res.status(errorResponses[404].httpCode)
+  res.json({message: errorResponses[404].message})
 }
 
 const isAdmin = (req, res ,next) => {
     const user = req.body.user
 
     const adminRole = roles.ADMIN
-    console.trace("CALLED")
-  console.trace('isAdminTest',user.roles.indexOf(adminRole) )
+
     if(user.roles.indexOf(adminRole) != -1 ){
       next()
     }else{

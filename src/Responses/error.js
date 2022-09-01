@@ -26,5 +26,9 @@ module.exports = {
     user_invalid_role: {
         httpCode: 401,
         message: "Invalid role to perfom this action"
+    },
+    404: {
+        httpCode: 404,
+        message: 'Route not Found Auth service'
     }
 }
