@@ -9,7 +9,8 @@ const createUser = async (userData) => {
     try {
         const {name, email, password} = userData
         const user = await userModel.create({name, email, password: await hashPassword(password)})
-        return user
+
+        return {id: user.id , name: user.name, email: user.email}
     } catch (e) {
         throw(e)
     }
