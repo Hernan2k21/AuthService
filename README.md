@@ -5,7 +5,7 @@ This project uses the following environment variables:
 
 | Name                          | Description                         | Default Value                                  |
 | ----------------------------- | ------------------------------------| -----------------------------------------------|
-|PORT           | App listening port          | 8080   |
+|PORT           | App listening port          | 8081   |
 |DB_USERNAME| Mysql database username |root
 |DB_PASSWORD|Mysql database password|root
 |DB_HOST|Mysql database host| localhost
